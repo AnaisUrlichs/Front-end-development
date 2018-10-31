@@ -16,6 +16,8 @@ body, html{
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  z-index: 1;
+  position: relative;
 }
 
 .bg-text {
@@ -26,7 +28,7 @@ body, html{
   border: 3px solid #f1f1f1;
   position: absolute;
   top: 50%;
-  left: 58%;
+  left: 50%;
   transform: translate(-50%, -50%);
   z-index: 3;
   width: 70%;
@@ -44,10 +46,8 @@ background-color: #f1f1f1;
 width: 250px;
 height: 100%;
 position: fixed;
-z-index: 2;
 top: 0;
 left: 0;
-overflow-x: hidden;
 }
 
 ul.content {
