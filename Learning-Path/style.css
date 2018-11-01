@@ -17,7 +17,6 @@ body, html{
   background-repeat: no-repeat;
   background-size: cover;
   z-index: 1;
-  position: relative;
 }
 
 .bg-text {
@@ -43,11 +42,12 @@ vertical-align: top;
 
 .ContentBG {
 background-color: #f1f1f1;
-width: 250px;
-height: 100%;
-position: fixed;
+width: 20%;
+height: 145%;
 top: 0;
 left: 0;
+padding-top: 1px;
+float: left;
 }
 
 ul.content {
@@ -68,7 +68,7 @@ ul.content li a {
 ul.content h3{
 	color: white;
 	background-color: maroon;
-	padding: 5px 5px;
+	padding: 13px 12px;
 }
 
 ul.content li a:hover:not(.active) {
@@ -78,10 +78,12 @@ ul.content li a:hover:not(.active) {
 
 .SideSpace {
 	padding: 10px;
+	padding-top: 5px;
 }
 
-div.Main {
-	margin-left: 243px;
+.Main {
+	float: left;
+	width: 80%;
 }
 
 #Section1, #Section2, #Section3, #Section4 {
