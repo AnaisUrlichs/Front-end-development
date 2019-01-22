@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Vue First Project</title>
+	<script src="vue.js"></script>
+
+</head>
+<body>
+
+	<div class="app">
+		<div class="holder">
+
+			<form @submit.prevent="addSkill">
+
+			<input type="text" placeholder="Enter a To Do!" v-model="skill" v-validate="'min:5" name="skill">
+
+			</form>
+
+			<ul>
+				<li v-for="(data, index) in skills" :key='index'> {{index}}. {{data.skill}}</li>
+			</ul>
+
+			<p>These are the skills that you possess.</p>
+
+		</div>
+	</div>
+
+	<script>
+		new Vue({
+				el: '.app',
+				data() {
+					return {
+						skill: '',
+						skills: [
+						{ "skill": "Vue.js"},
+						{ "skill": "Front-End"},
+						],
+					}
+				},
+			methods: {
+				addSkill() {
+					this.validator.validateAll().then((result) => {
+						if (result) {
+							this.skills.push({skill: this.skill})
+							this.skill = ''
+						}else {
+							console.log('Not valid!')
+						}
+					})
+				}
+			}
+		});
+
+	</script>
+
+<style scoped>
+	.alert {
+		background-color: yellow;
+		width: 100%;
+		height: 30px;
+	}
+</style>
+
+
+</body>
+</html>
