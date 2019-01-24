@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Vue First Project</title>
+	<script src="vue.js"></script>
+	<link rel="stylesheet" type="text/css" href="styles.css">
+
+
+</head>
+<body>
+
+<div id="root">
+	
+	<button :class="{'is-loading': isLoading}" @click="toggleClass">Click me</button>
+</div>
+
+
+<script>
+	
+	var app = new Vue ({
+		el: '#root',
+		
+		data: {
+			isLoading: false
+		},
+
+
+		methods: {
+			toggleClass() {
+				this.isLoading = true;
+			}
+		}
+
+
+
+	});
+
+</script>
+
+<style>
+	
+	.is-loading {
+		background: red;
+	}
+
+</style>
+
+
+</body>
+</html>
