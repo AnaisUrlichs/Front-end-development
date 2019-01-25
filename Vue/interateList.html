@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Vue First Project</title>
+	<script src="vue.js"></script>
+	<link rel="stylesheet" type="text/css" href="styles.css">
+
+
+</head>
+<body>
+
+<div id="root">
+
+	<h1>All tasks</h1>
+	
+	<ul>
+		<li v-for="task in tasks" v-text="task.description"></li>
+	</ul>
+
+	<h2>Incomplete Tasks</h2>
+
+	<ul>
+		<li v-for="task in incompleteTasks" v-text="task.description"></li>
+	</ul>
+
+</div>
+
+
+<script>
+	
+	var app = new Vue ({
+		el: '#root',
+		
+		data: {
+			tasks: [
+			{description: 'go to the store', completed: false},
+			{description: 'prepare dinner', completed: true},
+			{description: 'study', completed: false},
+			]
+		},
+
+		computed: {
+		
+		incompleteTasks() {
+				return this.tasks.filter(task => ! task.completed);
+
+			}
+			
+
+		}
+
+	});
+
+</script>
+
+
+</body>
+</html>
