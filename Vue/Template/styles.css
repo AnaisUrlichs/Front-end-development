@@ -1,0 +1,24 @@
+Vue.component('task', {
+
+	template: '<li>Foobar</li>',
+
+	data() {
+		return {
+			task: [
+			{task: 'Go to the store', complete: true},
+			{task: 'Go to the bank', complete: true},
+			{task: 'Go to the restaurant', complete: false},
+			],
+		};
+	}
+});
+
+Vue.component('task-list', {
+
+template: '<li>Foobar</li>'
+});
+
+
+new Vue ({
+	el: '#root'
+});
