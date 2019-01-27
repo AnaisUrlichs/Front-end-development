@@ -1,0 +1,29 @@
+body {
+	text-align: center;
+}
+
+.calculator {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-auto-rows: minmax(50px, auto);
+	max-width: 400px;
+	margin: 0 auto;
+}
+
+.display {
+	grid-column: 1/5;
+}
+
+.zero{
+	grid-column: 1/3;
+}	
+
+.btn {
+	background-color: #eee;
+	border: 1px solid #999;
+}
+
+.operator {
+	background-color: orange;
+	color: white;
+}
