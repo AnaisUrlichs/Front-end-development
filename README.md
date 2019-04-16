@@ -17,6 +17,8 @@ If you have any suggestions or comments on improvements, feel free to reach out:
 - [x] Learn CSS syntax
 - [x] Learn CSS layouts
 - [x] Practice mobile-first
+- [x] PHP
+- [x] PHP connected to PhpMyAdmin database
 - [x] Learn JavaScript syntax
 - [x] Connect JavaScript with your static website
 - [x] Start learning JavaScript frameworks
